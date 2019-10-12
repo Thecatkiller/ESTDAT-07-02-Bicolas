@@ -27,4 +27,4 @@ NodoDProducto *PilaDProductoIzq, *PilaDProductoDer;
 NodoDProducto *ColaDProductoIzq, *ColaDProductoDer;
 
 int limite = 5, topePila = 0, topeCola = 0;
-int topePilaD = 0, int topeColaD = 0;
+int topePilaD = 0, topeColaD = 0;
