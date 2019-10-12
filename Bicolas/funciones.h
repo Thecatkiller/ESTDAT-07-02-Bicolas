@@ -38,8 +38,10 @@ Producto desaPilar(int &tope, NodoSProducto *&Ini, NodoSProducto *&Fin) {
 			Fin = x;
 			Fin->puntero = NULL;
 		}
+		tope--;
 	}
 	else {
 		MessageBox::Show("Esta vacia");
 	}
+	return dato;
 }
