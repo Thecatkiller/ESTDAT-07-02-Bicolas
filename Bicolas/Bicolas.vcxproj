@@ -133,13 +133,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="frmColaDoble.cpp" />
     <ClCompile Include="frmColas.cpp" />
+    <ClCompile Include="frmPilaDoble.cpp" />
     <ClCompile Include="frmPilas.cpp" />
     <ClCompile Include="frmPrincipal.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="estructuras.h" />
+    <ClInclude Include="frmColaDoble.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="frmColas.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="frmPilaDoble.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="frmPilas.h">
@@ -151,6 +159,12 @@
     <ClInclude Include="funciones.h" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frmColas.resx">
+      <DependentUpon>frmColas.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPilas.resx">
+      <DependentUpon>frmPilas.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.h</DependentUpon>
     </EmbeddedResource>

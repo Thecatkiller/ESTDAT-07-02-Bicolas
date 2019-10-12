@@ -40,6 +40,9 @@ namespace Bicolas {
 	private: System::Windows::Forms::ToolStripMenuItem^  colasToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripSeparator^  toolStripMenuItem1;
 	private: System::Windows::Forms::ToolStripMenuItem^  salirToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^  listasDoblesToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^  pilasToolStripMenuItem1;
+	private: System::Windows::Forms::ToolStripMenuItem^  colasToolStripMenuItem1;
 	protected:
 
 	private:
@@ -61,12 +64,18 @@ namespace Bicolas {
 			this->colasToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->toolStripMenuItem1 = (gcnew System::Windows::Forms::ToolStripSeparator());
 			this->salirToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->listasDoblesToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->pilasToolStripMenuItem1 = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->colasToolStripMenuItem1 = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->menuStrip1->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// menuStrip1
 			// 
-			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->listasSimplesToolStripMenuItem });
+			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(2) {
+				this->listasSimplesToolStripMenuItem,
+					this->listasDoblesToolStripMenuItem
+			});
 			this->menuStrip1->Location = System::Drawing::Point(0, 0);
 			this->menuStrip1->Name = L"menuStrip1";
 			this->menuStrip1->Size = System::Drawing::Size(284, 24);
@@ -109,6 +118,30 @@ namespace Bicolas {
 			this->salirToolStripMenuItem->Text = L"Salir";
 			this->salirToolStripMenuItem->Click += gcnew System::EventHandler(this, &frmPrincipal::salirToolStripMenuItem_Click);
 			// 
+			// listasDoblesToolStripMenuItem
+			// 
+			this->listasDoblesToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(2) {
+				this->pilasToolStripMenuItem1,
+					this->colasToolStripMenuItem1
+			});
+			this->listasDoblesToolStripMenuItem->Name = L"listasDoblesToolStripMenuItem";
+			this->listasDoblesToolStripMenuItem->Size = System::Drawing::Size(87, 20);
+			this->listasDoblesToolStripMenuItem->Text = L"Listas Dobles";
+			// 
+			// pilasToolStripMenuItem1
+			// 
+			this->pilasToolStripMenuItem1->Name = L"pilasToolStripMenuItem1";
+			this->pilasToolStripMenuItem1->Size = System::Drawing::Size(180, 22);
+			this->pilasToolStripMenuItem1->Text = L"Pilas";
+			this->pilasToolStripMenuItem1->Click += gcnew System::EventHandler(this, &frmPrincipal::pilasToolStripMenuItem1_Click);
+			// 
+			// colasToolStripMenuItem1
+			// 
+			this->colasToolStripMenuItem1->Name = L"colasToolStripMenuItem1";
+			this->colasToolStripMenuItem1->Size = System::Drawing::Size(180, 22);
+			this->colasToolStripMenuItem1->Text = L"Colas";
+			this->colasToolStripMenuItem1->Click += gcnew System::EventHandler(this, &frmPrincipal::colasToolStripMenuItem1_Click);
+			// 
 			// frmPrincipal
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -134,6 +167,14 @@ namespace Bicolas {
 	}
 	private: System::Void colasToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
 		frmColas ^x = gcnew frmColas;
+		x->Show();
+	}
+	private: System::Void pilasToolStripMenuItem1_Click(System::Object^  sender, System::EventArgs^  e) {
+		frmPilaDoble ^x = gcnew frmPilaDoble;
+		x->Show();
+	}
+	private: System::Void colasToolStripMenuItem1_Click(System::Object^  sender, System::EventArgs^  e) {
+		frmColaDoble ^x = gcnew frmColaDoble;
 		x->Show();
 	}
 	};

@@ -6,6 +6,8 @@
 #include "funciones.h"
 #include "frmPilas.h"
 #include "frmColas.h"
+#include "frmColaDoble.h"
+#include "frmPilaDoble.h"
 
 #include "frmPrincipal.h"
 
