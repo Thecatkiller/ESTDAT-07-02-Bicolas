@@ -133,11 +133,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="frmColas.cpp" />
     <ClCompile Include="frmPilas.cpp" />
     <ClCompile Include="frmPrincipal.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="estructuras.h" />
+    <ClInclude Include="frmColas.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="frmPilas.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -145,6 +149,11 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="funciones.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="frmPrincipal.resx">
+      <DependentUpon>frmPrincipal.h</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
